@@ -22,3 +22,13 @@ with open("beosztas.txt","r",encoding="utf-8") as fm1:
 Hány bejegyzés található az állományban? Az eredményt írassa ki a képernyőre! 
 """
 print(f"2.Feladat A fájlban {len(beosztasok)} bejegyzés van.")
+"""
+3. feladat
+Mennyi a heti össz óraszám az iskolában?
+"""
+def osszegzes(bok):
+    osszeg=0
+    for elem in bok:
+        osszeg+=elem["oraszam"]
+    return osszeg
+print(f"3. Feladat {osszegzes(beosztasok)} a heti össz óraszám az iskolában.")
