@@ -62,3 +62,22 @@ with open("of.txt","w",encoding="utf-8") as fout:
     for beosztas in beosztasok:
         if beosztas["tantargy"]=="osztalyfonoki":
             print(f"{beosztas['osztaly']} - {beosztas['tanar']}", file=fout)
+
+"""
+6. feladat
+Egyes osztályokban bizonyos tantárgyakat a tanulók csoportbontásban tanulnak: ekkor az
+adott tantárgyra és osztályra két bejegyzést is tartalmaz a tantárgyfelosztás. 
+Kérje be egy osztály azonosítóját, valamint egy tantárgy nevét, és írassa ki a képernyőre, hogy az adott
+osztály a megadott tantárgyat csoportbontásban vagy osztályszinten tanulja-e!
+(Feltételezheti, hogy a megadott osztály tanulja a megadott tantárgyat.) 
+"""
+print("6. feladat")
+be_osztaly=input("Osztály= ") or "10.b"
+be_tantargy=input("Tantárgy= ")or "kemia"
+print(f"Csoportbontásban tanulják")
+i=0
+while i<len(beosztasok) and not(beosztasok[i]["osztaly"]==be_osztaly and beosztasok[i]["tantargy"]==be_tantargy):
+    i+=1
+
+
+
