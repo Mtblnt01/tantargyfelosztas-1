@@ -73,11 +73,27 @@ osztály a megadott tantárgyat csoportbontásban vagy osztályszinten tanulja-e
 """
 print("6. feladat")
 be_osztaly=input("Osztály= ") or "10.b"
-be_tantargy=input("Tantárgy= ")or "kemia"
+be_tantargy=input("Tantárgy= ") or "kemia"
 print(f"Csoportbontásban tanulják")
-i=0
-while i<len(beosztasok) and not(beosztasok[i]["osztaly"]==be_osztaly and beosztasok[i]["tantargy"]==be_tantargy):
-    i+=1
+# i=0
+# while i<len(beosztasok) and not(beosztasok[i]["osztaly"]==be_osztaly and beosztasok[i]["tantargy"]==be_tantargy):
+#     i+=1
+def csoportban_tanuljak(beo, be_o, be_t):
+    i=0
+    while i<len(beo) and not(beo[i]["osztaly"]==be_o):
+        i+=1
+    return not(i<len(beo))
+
+if csoportban_tanuljak(beosztasok, be_osztaly, be_tantargy):
+    print("Csoportbontásban tanulják") #10.x
+else:
+    print("Osztályszinten tanulják")
+
+"""
+7. feladat
+A fenntartó számára az is fontos információ, hogy hány tanár dolgozik az iskolában. Írassa
+ki ezt az adatot a képernyőre!
+"""
 
 
 
