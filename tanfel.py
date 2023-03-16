@@ -94,6 +94,13 @@ else:
 A fenntartó számára az is fontos információ, hogy hány tanár dolgozik az iskolában. Írassa
 ki ezt az adatot a képernyőre!
 """
+tanarok=[]
+for beosztas in beosztasok:
+    if beosztas["tanar"] not in tanarok:
+        tanarok.append(beosztas["tanar"])
+
+
+print(f"Az iskolában {len(tanarok)} tanár tanít")
 
 
 
